@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="row">  <div class="col-sm-1"></div>
+  <a href="http://localhost:8085/myser/home2.html"> <button  type='button'class='btn btn-success'> HOME  </button></a>
+
+ <a href="http://localhost:8085/myser/login.jsp"> <button type='button' class='btn btn-info'> LOGIN  </button></a>
+<a href="http://localhost:8085/myser/logout.jsp">  <button  type='button'class='btn btn-danger' onclick="myfun()">  LOGOUT  </button></a>
+ <a href="http://localhost:8085/myser/Signup.html"> <button  type='button'class='btn btn-success'> SIGN UP  </button></a>
+ <a href="http://localhost:8085/myser/profile.jsp"> <button  type='button'class='btn btn-success'> PROFILE  </button></a>
+  <a href="http://localhost:8085/myser/dbj.jsp"> <button  type='button'class='btn btn-success'> CONTEST  </button></a>
+  
+</div>
+<script> 
+function myfun(){
+	var x= new XMLHttpRequest();
+	x.open('GET','http://localhost:8085/myser/load.html',true);
+	x.send();
+	x.onreadystatechange=function(){
+		if(x.readyState==4&&x.status==200){
+			document.getElementById('my').innerHTML=x.responseText;
+			
+			
+		}
+		
+	}
+
+
+
+</body>
+</html>

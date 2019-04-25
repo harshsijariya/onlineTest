@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="http://localhost:8085/webapp/fi.css">
+</head>
+<body>
+<header>
+
+<ul >
+<li><a href="#">Home</a>  </li>
+<li><a href="http://localhost:8085/myser/login.jsp">Login</a>  </li>
+<li><a href="#">Exam</a>  </li>
+<li><a href="#">Result</a>  </li>
+</ul>
+<section>
+  <img class="hc" src="file:///C:/Users/user/eclipse-workspace/myser/WebContent/image/myimg.jpg" width="100%" height="400">
+  <img class="hc" src="file:///C:/Users/user/eclipse-workspace/myser/WebContent/image/harshg.jpg" width="100%" height="400">
+  <img class="hc" src="file:///C:/Users/user/eclipse-workspace/myser/WebContent/image/hj.jpg" width="100%" height="400">
+  
+</section>
+
+</header>
+<script>
+// Automatic Slideshow - change image every 3 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("hc");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 3000);
+}
+</script>
+</body>
+</html>

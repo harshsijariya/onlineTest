@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h id='op'></h>
+<form id="my_form" action="" method="post">
+    <fieldset class="my_fieldset">
+        <input type="radio" name="my_radio" value="value_A" checked="checked"/>Value A<br/>
+        <input type="radio" name="my_radio" value="value_B"/>Value B<br/>
+    </fieldset>
+        <input type="submit" value="Send" id="Send"  tabindex="110">
+</form>
+
+<script>
+
+var myVar = setInterval(setColor, 1000);
+ var i=0;var j=0;var k=0;
+function setColor() {i++
+	document.getElementById('op').innerHTML=k+" :"+j+" :"+i;
+	if(i==59){
+	j++;
+	i=0;
+		
+	}
+	if(j==59&&i==58){
+		j==0;
+		k++;
+		
+	}
+  }
+
+
+</script>
+
+</body>
+</html>

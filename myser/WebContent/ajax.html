@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div id="my">
+<h>This is to be cahnged</h>
+<button id="btn" onclick="myfun()">click me</button>
+<script> 
+function myfun(){
+	var x= new XMLHttpRequest();
+	x.open('GET','http://localhost:8085/myser/load.html',true);
+	x.send();
+	x.onreadystatechange=function(){
+		if(x.readyState==4&&x.status==200){
+			document.getElementById('my').innerHTML=x.responseText;
+			
+			
+		}
+		
+	}
+	
+	
+	
+	
+}
+
+</script>
+</div>
+</body>
+</html>
